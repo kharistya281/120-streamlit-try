@@ -1,6 +1,6 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
-import streamlit as st
+import streamlit as st 
 
 # data = pd.read_csv("tips.csv")
 
