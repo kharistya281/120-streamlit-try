@@ -7,7 +7,7 @@ data = pd.read_csv("tips.csv")
 st.title('Data Visualization of Tip Given by The Customer')
 
 st.write("Bar Chart")
-st.bar_chart(data[['day', 'tip']])
+st.bar_chart(data['tip'])
 
 st.write("Line Chart")
 st.line_chart(data[['tip', 'size']])
