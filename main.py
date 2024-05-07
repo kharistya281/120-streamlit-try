@@ -41,6 +41,9 @@ def main():
     st.write("Histogram")
     create_histogram(dataCsv) 
 
+if __name__ == "__main__":
+    main()
+    
 # st.title('Data Visualization of Tip Given by The Customer')
 
 # data = pd.read_csv("tips.csv")
