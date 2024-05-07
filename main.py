@@ -7,15 +7,11 @@ data = pd.read_csv("tips.csv")
 st.title('Data Visualization of Tip Given by The Customer')
 
 st.write("Bar Chart")
-bar = plt.bar(data['day'], data['tip'])
+bar = plt.bar(data['tip'])
 st.bar_chart(bar)
-st.markdown("### X Label: Day")
-st.markdown("### Y Label: Tip")
 
 st.write("Line Chart")
 st.line_chart(data[['tip', 'size']])
-st.markdown("### X Label: Day")
-st.markdown("### Y Label: Tip and Size")
 
 # data = pd.read_csv("tips.csv")
 
