@@ -2,6 +2,21 @@ import pandas as pd
 import streamlit as st 
 import matplotlib.pyplot as plt
 
+data = pd.read_csv("tips.csv")
+
+st.title('Data Visualization of Tip Given by The Customer')
+
+st.write("Bar Chart")
+bar = plt.bar(data['day'], data['tip'])
+st.bar_chart(bar)
+st.markdown("### X Label: Day")
+st.markdown("### Y Label: Tip")
+
+st.write("Line Chart")
+st.line_chart(data[['tip', 'size']])
+st.markdown("### X Label: Day")
+st.markdown("### Y Label: Tip and Size")
+
 # data = pd.read_csv("tips.csv")
 
 # st.title('Try Data Visualization')
@@ -12,37 +27,37 @@ import matplotlib.pyplot as plt
 # st.line_chart
 
 
-def create_bar_plot(data):
-    plt.bar(data['day'], data['tip'])
-    plt.xlabel('Day')
-    plt.ylabel('Tip')
-    plt.title('Bar Chart')
+# def create_bar_plot(data):
+#     plt.bar(data['day'], data['tip'])
+#     plt.xlabel('Day')
+#     plt.ylabel('Tip')
+#     plt.title('Bar Chart')
 
-def create_line_chart(data):
-    plt.plot(data['tip'], data['size'])
-    plt.xlabel('Day')
-    plt.ylabel('Tip')
+# def create_line_chart(data):
+#     plt.plot(data['tip'], data['size'])
+#     plt.xlabel('Day')
+#     plt.ylabel('Tip')
 
-def create_histogram(data):
-    plt.hist(data['total_bill'])
+# def create_histogram(data):
+#     plt.hist(data['total_bill'])
 
-def main():
-    st.title('Data Visualization of Tip Given by The Customer')
+# def main():
+#     st.title('Data Visualization of Tip Given by The Customer')
 
-    dataCsv = pd.read_csv("tips.csv")
+#     dataCsv = pd.read_csv("tips.csv")
 
-    st.write("Line Chart")
-    create_line_chart(dataCsv)
-    st.pyplot()
+#     st.write("Line Chart")
+#     create_line_chart(dataCsv)
+#     st.pyplot()
 
-    st.write("Bar Chart")
-    create_bar_plot(dataCsv)
+#     st.write("Bar Chart")
+#     create_bar_plot(dataCsv)
 
-    st.write("Histogram")
-    create_histogram(dataCsv) 
+#     st.write("Histogram")
+#     create_histogram(dataCsv) 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
     
 # st.title('Data Visualization of Tip Given by The Customer')
 
